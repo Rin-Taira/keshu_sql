@@ -17,7 +17,7 @@ CREATE MATERIALIZED VIEW mv_student AS
 SELECT * FROM v_student;
 
 -- 4.ファンクション
-CREATE OR REPLACE FUNCTION ic_amount(amount integer) RETURNS integer
+CREATE OR REPLACE FUNCTION ic_amount(amount decimal) RETURNS decimal
 LANGUAGE plpgsql
 AS $function$
 declare
@@ -28,4 +28,12 @@ end;
 $function$;
 
 SELECT *, ic_amount(amount)
-FROM sales AS s1;
+FROM sales;
+
+-- 5.シーケンス
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(50)
+);
+
+SELECT setval('users_id_seq', 100);
