@@ -1,0 +1,3 @@
+INSERT INTO tax VALUES
+(0, 1.1),
+(1, 1.08);

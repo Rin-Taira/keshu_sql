@@ -15,7 +15,7 @@ CREATE TABLE employee (
 
 CREATE TABLE tax (
     t_id INT PRIMARY KEY,
-    rate INT
+    rate FLOAT
 );
 
 CREATE TABLE product (
@@ -36,7 +36,7 @@ CREATE TABLE receipt (
 
 CREATE TABLE eat_in (
     eat_in_flag INT PRIMARY KEY,
-    eat_in_rate INT
+    eat_in_rate FLOAT
 );
 
 CREATE TABLE rec_detail (
